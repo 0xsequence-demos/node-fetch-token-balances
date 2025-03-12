@@ -7,7 +7,11 @@ const main = async () => {
   const indexer = new SequenceIndexerGateway("https://indexer.sequence.app", projectAccessKey)
 
 
-  let page: Page = {pageSize: 5}
+  let page: Page = {}
+
+  // NOTE: you can adjust pageSize to get more or less results.
+  // or just leaveit empty and use the defaults.
+  // page.pageSize = 5
 
   while (true) {
     const { balances, page: nextPage } = await indexer.getTokenBalances({
