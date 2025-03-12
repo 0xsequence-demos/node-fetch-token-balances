@@ -21,7 +21,7 @@ const main = async () => {
 
     // print balances
     console.log('=> balances found:', balances.length)
-    // console.log('=> balances:', balances)
+    console.log('=> balances:', balances)
 
     // query for next page or finish
     if (!nextPage.more) {
